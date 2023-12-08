@@ -1,10 +1,20 @@
 package membership;
+import java.sql.Date;
+
 
 public class MemberDTO {
 
 	private String id;
 	private String pass;
-	private String regidate;
+	private Date regidate;
+	public Date getRegidate() {
+		return regidate;
+	}
+
+	public void setRegidate(Date regidate) {
+		this.regidate = regidate;
+	}
+
 	private String chname;
 	private String email;
 
@@ -40,11 +50,4 @@ public class MemberDTO {
 		this.pass = pass;
 	}
 
-	public String getRegidate() {
-		return regidate;
-	}
-
-	public void setRegidate(String regidate) {
-		this.regidate = regidate;
-	}
 }

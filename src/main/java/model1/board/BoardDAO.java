@@ -34,6 +34,66 @@ public class BoardDAO extends JDBConnect {
 		return totalCount;
 	}
 
+	public List<BoardDTO> selectSamung(Map<String, Object> map) { // 상미고 게시물 목록 가져올 메소드
+		List<BoardDTO> bbs = new Vector<BoardDTO>();
+		String query = "SELECT * FROM board WHERE title LIKE '%세명컴퓨터고등학교%' OR title LIKE '%세명고%' OR title LIKE '%세컴고%'";
+
+		try {
+			stmt = con.createStatement(); // 쿼리문 생성
+			rs = stmt.executeQuery(query); // 쿼리 실행
+
+			while (rs.next()) { // 결과를 순화하며...
+				// 한 행(게시물 하나)의 내용을 DTO에 저장
+				BoardDTO dto = new BoardDTO();
+				dto.setNum(rs.getString("num")); // 일련번호
+				dto.setTitle(rs.getString("title")); // 제목
+				dto.setContent(rs.getString("content")); // 내용
+				dto.setPostdate(rs.getDate("postdate")); // 작성일
+				dto.setId(rs.getString("id")); // 작성자 아이디
+				dto.setVisitcount(rs.getString("visitcount")); // 조회수
+				dto.setTag(rs.getString("tag")); // 카테고리
+				dto.setChname(rs.getString("chname")); // 학교 이름
+				dto.setGood(rs.getString("good"));
+
+				bbs.add(dto); // 결과 목록에 저장
+			}
+		} catch (Exception e) {
+			System.out.println("해쉬태그 조회중 예외 발생");
+			e.printStackTrace();
+		}
+		return bbs;
+	}
+	
+	public List<BoardDTO> selectSangil(Map<String, Object> map) { // 상미고 게시물 목록 가져올 메소드
+		List<BoardDTO> bbs = new Vector<BoardDTO>();
+		String query = "SELECT * FROM board WHERE title LIKE '%상일미디어고등학교%' OR title LIKE '%상미고%'";
+
+		try {
+			stmt = con.createStatement(); // 쿼리문 생성
+			rs = stmt.executeQuery(query); // 쿼리 실행
+
+			while (rs.next()) { // 결과를 순화하며...
+				// 한 행(게시물 하나)의 내용을 DTO에 저장
+				BoardDTO dto = new BoardDTO();
+				dto.setNum(rs.getString("num")); // 일련번호
+				dto.setTitle(rs.getString("title")); // 제목
+				dto.setContent(rs.getString("content")); // 내용
+				dto.setPostdate(rs.getDate("postdate")); // 작성일
+				dto.setId(rs.getString("id")); // 작성자 아이디
+				dto.setVisitcount(rs.getString("visitcount")); // 조회수
+				dto.setTag(rs.getString("tag")); // 카테고리
+				dto.setChname(rs.getString("chname")); // 학교 이름
+				dto.setGood(rs.getString("good"));
+
+				bbs.add(dto); // 결과 목록에 저장
+			}
+		} catch (Exception e) {
+			System.out.println("해쉬태그 조회중 예외 발생");
+			e.printStackTrace();
+		}
+		return bbs;
+	}
+
 	public List<BoardDTO> selectList(Map<String, Object> map) { // 게시물 목록 가져올 메소드
 		List<BoardDTO> bbs = new Vector<BoardDTO>();
 

@@ -21,7 +21,7 @@ public class MemberDAO extends JDBConnect {
 			if (rs.next()) {
 				dto.setId(rs.getString("id"));
 				dto.setPass(rs.getString("pwd"));
-				dto.setRegidate(rs.getString("regidate"));
+				dto.setRegidate(rs.getDate("regidate"));
 				dto.setChname(rs.getString("chname"));
 				dto.setEmail(rs.getString("email"));
 			}
