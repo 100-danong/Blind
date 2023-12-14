@@ -19,14 +19,14 @@ public class JDBConnect {
 //        try {
 //            Class.forName("oracle.jdbc.OracleDriver");
 //
-//            String url = "jdbc:oracle:thin:@localhost:1521:xe";  
+//            String url = "jdbc:oracle:thin:@localhost:1521:xe";
 //            String id = "musthave";
-//            String pwd = "1234"; 
-//            con = DriverManager.getConnection(url, id, pwd); 
+//            String pwd = "1234";
+//            con = DriverManager.getConnection(url, id, pwd);
 //
 //            System.out.println("DB 연결 성공(기본 생성자)");
 //        }
-//        catch (Exception e) {            
+//        catch (Exception e) {
 //            e.printStackTrace();
 //        }
 //    }

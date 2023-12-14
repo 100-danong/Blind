@@ -5,7 +5,7 @@
 <head>
 <link rel="stylesheet" href="./global.css">
 <meta charset="UTF-8">
-<title>뷰</title>
+<title>학교 정보</title>
 </head>
 <body>
 	<%
@@ -24,7 +24,7 @@
 	}
 	%>
 	<section id="wrapper">
-	<%@include file = "ViewSection.jsp" %>
+	<%@include file = "SchoolViewSection.jsp" %>
 	</section>
 	<footer>
 	<%@include file = "Footer.jsp" %>

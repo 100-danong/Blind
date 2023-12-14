@@ -1,7 +1,7 @@
 li{
 	font-size: 13px;
 	color: #94969b;
-	margin-left: 5px;
+
 }
 
 p {
@@ -60,7 +60,7 @@ li:hover{
 
 .wrapInfo{
 	display: flex;
-	max-width: 50%;
+	max-width: 35%;
 	align-items: flex-end;
     justify-content: space-between;
 }
@@ -103,16 +103,18 @@ ul{
 }
 
 .postLeft{
-	width: 50%;
+	width: 49%;
 	height: 170px;
 	border-bottom: 1px solid #eee;
 	border-right: 1px solid #eee;
+	margin-left: 1%;
 }
 
 .postRight{
-	width: 50%;
+	width: 49%;
 	height: 170px;
 	border-bottom: 1px solid #eee;
+	margin-left: 1%;
 }
 .silsigan {
 	text-align: center;

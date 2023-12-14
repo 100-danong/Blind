@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="./global.css">
 <meta charset="UTF-8">
-<title>뷰</title>
+<title>학교생활</title>
 </head>
 <body>
 	<%
@@ -24,10 +24,10 @@
 	}
 	%>
 	<section id="wrapper">
-	<%@include file = "ViewSection.jsp" %>
+		<%@include file="schoolLife_Sangil.jsp"%>
 	</section>
 	<footer>
-	<%@include file = "Footer.jsp" %>
+		<%@include file="Footer.jsp"%>
 	</footer>
 </body>
 </html>

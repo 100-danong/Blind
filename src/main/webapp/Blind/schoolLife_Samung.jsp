@@ -12,8 +12,8 @@ BoardDTO tagCheck = new BoardDTO();
 Map<String, Object> param = new HashMap<String, Object>();
 int totalCount = dao.selectCount(param);
 
-List<BoardDTO> boardLists = dao.selectList(param);
-dao.close();
+List<BoardDTO> boardLists = dao.selectSamung(param); 
+dao.close(); 
 %>
 <!DOCTYPE html>
 <html>
@@ -68,14 +68,14 @@ dao.close();
 	<div class="interface">
 		<strong>
 			<ul class="interfaceall">
-				<a href="topicBest.jsp"><li class="main">토픽 베스트</li></a>
+				<a href="topicBest.jsp"><li>토픽 베스트</li></a>
 				<a href="freePost.jsp"><li>자유 게시판</li></a>
 				<a href="love.jsp"><li>썸&연애</li></a>
 				<a href="cafeteria.jsp"><li>급식 자랑</li></a>
 				<a href="transfer.jsp"><li>전학&성적</li></a>
 				<a href="health.jsp"><li>헬스&다이어트</li></a>
 				<a href="travel.jsp"><li>여행&먹방</li></a>
-				<a href="schoolLife.jsp"><li>학교생활</li></a>
+				<a href="schoolLife.jsp"><li class="main">학교생활</li></a>
 				<a href="hobby.jsp"><li>취미생활</li></a>
 				<a href="flex.jsp"><li>지름&쇼핑</li></a>
 				<a href="animal.jsp"><li>반려 동물</li></a>
@@ -96,9 +96,9 @@ dao.close();
 	%>
 	<div class="postall">
 	<% 
-	// 게시물이 있을 때 & 태그가 토픽 베스트일 때
+	// 게시물이 있을 때 & 태그가 학교생활일 때
 	for (BoardDTO dto : boardLists) {
-		if (dto.getTag().equals("토픽 베스트")) {
+		if (dto.getTag().equals("학교생활")) {
 			check++;
 			step++;
 			if (step % 2 != 0) {
@@ -106,14 +106,13 @@ dao.close();
 	<div class="postLeft">
 		<ul>
 			<li class="caeegory"><%=dto.getTag()%></li>
-			<li class="title"><h3><a href="View.jsp">
+			<li class="title"><h3>
 					<strong><%=dto.getTitle()%>
-					</a>
 				</h3> </strong></li>
 			<li class="content"><%=dto.getContent()%></li>
 			<li class="name">
 				<p><%=dto.getChname()%></p>
-				<p><%=" · "%></p>
+				<p><%=" | "%></p>
 				<p><%=dto.getId()%></p>
 			</li>
 			<div class="wrapInfo">

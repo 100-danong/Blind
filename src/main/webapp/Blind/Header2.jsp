@@ -12,15 +12,9 @@
 </head>
 <body>
 <div class="tag">
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<a href="./home2.jsp" class="maintitle"> 
-=======
 		<a href="./home.jsp" class="maintitle"> 
->>>>>>> 95eb611e27daad560b120d699a60aaf071b3ef38
-=======
 		<a href="./home.jsp" class="maintitle"> 
->>>>>>> 95eb611e27daad560b120d699a60aaf071b3ef38
 		<img src="https://i.namu.wiki/i/YEmalxMrXbQcoqIWG5cyPYhEfYV_2LUOiBUTlnLQQqw2ixMJmiD63J_fGBkiHLMaKv_NRjOPk0k3Z6AckkyCdg.webp" alt="img" class="mainlogo"/>
 		<h1><strong>blind</strong></h1>
 		</a>
